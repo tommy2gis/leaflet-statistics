@@ -9,9 +9,19 @@
  var tangniaodata = [];
  var gaoxueyadata = [];
  var laoniandata = [];
+ var tangniaodata2 = [];
+ var gaoxueyadata2 = [];
+ var laoniandata2 = [];
  var hexdata = [];
+ var shequnamedata = [];
  for (var i = 0; i < shequdata.features.length; i++) {
      var item = shequdata.features[i].properties;
+     if (i < 40) {
+         shequnamedata.push(item.COMMUNAME);
+         tangniaodata2.push(item.tangniaobin)
+         gaoxueyadata2.push(item.gaoyabin)
+         laoniandata2.push(item.oldpeop)
+     }
      heatdangandata.push([item.lat, item.long, item.dangan])
      tangniaodata.push([item.lat, item.long, item.tangniaobin])
      gaoxueyadata.push([item.lat, item.long, item.gaoyabin])
@@ -31,7 +41,7 @@
  // Options for the hexbin layer
  var options = {
      radius: 20, // Size of the hexagons/bins
-     opacity: 0.5, // Opacity of the hexagonal layer
+     opacity: 0.8, // Opacity of the hexagonal layer
      duration: 1000, // millisecond duration of d3 transitions (see note below)
      lng: function(d) {
          return d[1];
@@ -42,8 +52,8 @@
      value: function(d) {
          return d[0].o[2];
      }, // value accessor - derives the bin value
-     valueFloor: 1000,
-     valueCeil: 80000, // override the color scale domain high value
+     valueFloor: 100,
+     valueCeil: 3000, // override the color scale domain high value
      colorRange: ["#00FF00", "#FFA500"], // default color range for the heat map (see note below)
      onmouseover: function(d, node, layer) {},
      onmouseout: function(d, node, layer) {},
@@ -53,8 +63,8 @@
  var hexLayer = L.hexbinLayer(options);
  // Optionally, access the d3 color scale directly
  // Can also set scale via hexLayer.colorScale(d3.scale.linear()...)
- hexLayer.colorScale().range(['white', 'blue']);
- hexLayer.data(heatdangandata);
+ hexLayer.colorScale().range(['white', '#E87C25']);
+ hexLayer.data(tangniaodata);
  /*var geoData = {
      type: "FeatureCollection",
      features: hexdata
@@ -239,11 +249,12 @@
          }
      },
      legend: {
-         data: ['农村低保户数', '城镇低保户数'],
+         data: ['农村低保户数', '城镇低保户数', '农村低保人数', '城镇低保人数'],
          textStyle: {
              color: '#fff',
              fontSize: 14
          },
+         selectedMode: 'single'
      },
      grid: {
          left: '3%',
@@ -290,6 +301,14 @@
          name: '城镇低保户数',
          type: 'bar',
          data: [238, 445, 65, 195, 176, 87, 13, 49, 86, 30]
+     }, {
+         name: '农村低保人数',
+         type: 'bar',
+         data: [367, 755, 1660, 1979, 1467, 2070, 820, 1667, 3258, 508]
+     }, {
+         name: '城镇低保人数',
+         type: 'bar',
+         data: [367, 755, 1660, 1979, 1467, 2070, 820, 1667, 3258, 508]
      }]
  };
  // 使用刚指定的配置项和数据显示图表。
@@ -495,10 +514,18 @@
  $(".panel li p").click(function(e) {
      switch (this.id) {
          case 'allpeop':
-             $(".apolygon").hide();
-             $(this).children().show();
-             mymap.addLayer(geojson);
-             geojson.setStyle(style);
+             if ($(".allapolygon").is(":hidden")) {
+                 currentitem = 'peoplenum';
+                 currentlegend.remove();
+                 legend.addTo(mymap);
+                 currentlegend = legend;
+                 $(".allapolygon").show();
+                 mymap.addLayer(geojson);
+                 geojson.setStyle(style);
+             } else {
+                 $(".allapolygon").hide();
+                 mymap.removeLayer(geojson);
+             }
              break;
          case 'dibao':
              if ($(".apiechart").is(":hidden")) {
@@ -510,21 +537,28 @@
              }
              break;
          case 'jun':
-             $(".apolygon").hide();
-             $(this).children().show();
-             currentitem = 'xljun';
-             var junstyle = function(feature) {
-                 return {
-                     weight: 1,
-                     opacity: 1,
-                     color: 'white',
-                     dashArray: '3',
-                     fillOpacity: 0.7,
-                     fillColor: getxljunColor(feature.properties.xljun)
-                 };
+             if ($(".junapolygon").is(":hidden")) {
+                 $(".junapolygon").show();
+                 currentitem = 'xljun';
+                 currentlegend.remove();
+                 xljunlegend.addTo(mymap);
+                 currentlegend = xljunlegend;
+                 var junstyle = function(feature) {
+                     return {
+                         weight: 1,
+                         opacity: 1,
+                         color: 'white',
+                         dashArray: '3',
+                         fillOpacity: 0.7,
+                         fillColor: getxljunColor(feature.properties.xljun)
+                     };
+                 }
+                 mymap.addLayer(geojson);
+                 geojson.setStyle(junstyle);
+             } else {
+                 $(".junapolygon").hide();
+                 mymap.removeLayer(geojson);
              }
-             mymap.addLayer(geojson);
-             geojson.setStyle(junstyle);
              break;
      }
  });
@@ -598,3 +632,111 @@
          myChart.setOption(option);
      };
  }
+ var danganChart = echarts.init(document.getElementById('jiandang'));
+ // 指定图表的配置项和数据
+ danganoption = {
+     tooltip: {
+         trigger: 'axis',
+         axisPointer: {
+             type: 'shadow'
+         }
+     },
+     legend: {
+         data: ['糖尿病建档数', '高血压建档数', '老年人建档数'],
+         textStyle: {
+             color: '#fff',
+             fontSize: 14
+         },
+         selectedMode: 'single'
+     },
+     grid: {
+         left: '3%',
+         right: '4%',
+         bottom: '5%',
+         containLabel: true
+     },
+     xAxis: {
+         type: 'value',
+         boundaryGap: [0, 0.01],
+         axisLine: {
+             lineStyle: {
+                 color: '#aaa'
+             }
+         },
+         axisLabel: {
+             rotate: 60,
+             show: true,
+             textStyle: {
+                 color: '#fff'
+             }
+         }
+     },
+     yAxis: {
+         type: 'category',
+         data: shequnamedata,
+         axisLine: {
+             lineStyle: {
+                 color: '#aaa'
+             }
+         },
+         axisLabel: {
+             show: true,
+             textStyle: {
+                 color: '#fff'
+             }
+         }
+     },
+     series: [{
+         name: '糖尿病建档数',
+         type: 'bar',
+         itemStyle: {
+             normal: {
+                 color: '#E87C25'
+             }
+         },
+         data: tangniaodata2
+     }, {
+         name: '高血压建档数',
+         type: 'bar',
+         itemStyle: {
+             normal: {
+                 color: '#C1232B'
+             }
+         },
+         data: gaoxueyadata2
+     }, {
+         name: '老年人建档数',
+         type: 'bar',
+         itemStyle: {
+             normal: {
+                 color: '#B5C334'
+             }
+         },
+         data: laoniandata2
+     }]
+ };
+ // 使用刚指定的配置项和数据显示图表。
+ danganChart.setOption(danganoption);
+ danganChart.on("legendselectchanged", function(param) {
+     var selected = param.name;
+     switch (selected) {
+         case '糖尿病建档数':
+             hexLayer.options.valueFloor = 100;
+             hexLayer.options.valueCeil = 3000;
+             hexLayer.colorScale().range(['white', '#E87C25']);
+             hexLayer.data(tangniaodata);
+             break;
+         case '高血压建档数':
+             hexLayer.options.valueFloor = 1000;
+             hexLayer.options.valueCeil = 8000;
+             hexLayer.colorScale().range(['white', '#C1232B']);
+             hexLayer.data(gaoxueyadata);
+             break;
+         case '老年人建档数':
+             hexLayer.options.valueFloor = 1000;
+             hexLayer.options.valueCeil = 8000;
+             hexLayer.colorScale().range(['white', '#B5C334']);
+             hexLayer.data(laoniandata);
+             break;
+     }
+ });
