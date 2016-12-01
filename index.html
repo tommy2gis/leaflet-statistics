@@ -8,45 +8,81 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <link href="lib/leaflet/leaflet.css" rel="stylesheet"/>
         <link href="css/index.css" rel="stylesheet"/>
+        <script src="lib/jquery.js">
+        </script>
         <script src="lib/leaflet/leaflet-src.js">
         </script>
         <script src="lib/layer.wmts-src.js">
         </script>
-
-         <script src="lib/echarts.min.js">
+        <script src="lib/echarts.min.js">
         </script>
-
-         <script src="data/jiedao.js">
+         <script src="lib/HeatLayer.js">
         </script>
-
+         <script src="lib/d3.v3.min.js">
+        </script>
+         <script src="lib/hexbin.js">
+        </script>
+        <!--   <script src="lib/HexbinLayer.js">
+            </script> -->
+        <script src="lib/leaflet-d3.js">
+                </script> 
+        <script src="data/jiedao.js">
+        </script>
+        <script src="data/shequ.js">
+        </script>
     </head>
 </html>
 <body>
-
     <div class="leftside">
         <ul class="panel" style="">
-            <li style="height: 100px" >
-                <p>江宁总人口</p>
+            <li style="height: 100px">
+                <p id="allpeop">
+                    江宁总人口
+                    <a class="apolygon">
+                        √
+                    </a>
+                </p>
                 <div>
-                    
                 </div>
             </li>
             <li style="height: 340px">
-                 <p>农村城镇低保统计</p>
-                <div id="zftxtu"  style="height: 300px;width: 300px;margin: 0 10px "></div>
+                <p id="dibao">
+                    农村城镇低保统计
+                    <a style="display: none;" class="apiechart">
+                        √
+                    </a>
+                </p>
+                <div id="zftxtu" style="height: 300px;width: 300px;margin: 0 10px ">
+                </div>
             </li>
             <li style="height: 340px">
-                 <p>军人统计</p>
-                <<div id="junren"  style="height: 300px;width:300px;margin: 0 10px "></div>
+                <p id="jun">
+                    军人统计
+                    <a style="display: none;" class="apolygon">
+                        √
+                    </a>
+                </p>
+                <div id="junren" style="height: 300px;width:300px;margin: 0 10px ">
+                </div>
             </li>
         </ul>
     </div>
-    <div class="rightside"></div>
-
-
-    <div id="mapid"></div>
- 
-     <script src="js/index.js">
-        </script>
-
+    <div class="rightside">
+        <ul class="rightpanel" style="">
+            <li style="height: 340px">
+                <p id="dangan">
+                    社区建档统计
+                    <a style="display: none;">
+                        √
+                    </a>
+                </p>
+                <div id="建档" style="height: 300px;width:300px;margin: 0 10px ">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="mapid">
+    </div>
+    <script src="js/index.js">
+    </script>
 </body>

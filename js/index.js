@@ -5,6 +5,76 @@
  }).setView([31.83, 118.8], 11);
  new L.TileLayer.TDT.Vector().addTo(mymap);
  new L.TileLayer.TDT.VectorAnno().addTo(mymap);
+ var heatdangandata = [];
+ var tangniaodata = [];
+ var gaoxueyadata = [];
+ var laoniandata = [];
+ var hexdata = [];
+ for (var i = 0; i < shequdata.features.length; i++) {
+     var item = shequdata.features[i].properties;
+     heatdangandata.push([item.lat, item.long, item.dangan])
+     tangniaodata.push([item.lat, item.long, item.tangniaobin])
+     gaoxueyadata.push([item.lat, item.long, item.gaoyabin])
+     laoniandata.push([item.lat, item.long, item.oldpeop])
+         /* hexdata.push({
+              properties: item,
+              type: "Feature",
+              geometry: {
+                  coordinates: [item.long, item.lat],
+                  type: "Point"
+              }
+          })*/
+ };
+ var heat = L.heatLayer(heatdangandata, {
+     radius: 25
+ });
+ // Options for the hexbin layer
+ var options = {
+     radius: 20, // Size of the hexagons/bins
+     opacity: 0.5, // Opacity of the hexagonal layer
+     duration: 1000, // millisecond duration of d3 transitions (see note below)
+     lng: function(d) {
+         return d[1];
+     }, // longitude accessor
+     lat: function(d) {
+         return d[0];
+     }, // latitude accessor
+     value: function(d) {
+         return d[0].o[2];
+     }, // value accessor - derives the bin value
+     valueFloor: 1000,
+     valueCeil: 80000, // override the color scale domain high value
+     colorRange: ["#00FF00", "#FFA500"], // default color range for the heat map (see note below)
+     onmouseover: function(d, node, layer) {},
+     onmouseout: function(d, node, layer) {},
+     onclick: function(d, node, layer) {}
+ };
+ // Create the hexbin layer and add it to the map
+ var hexLayer = L.hexbinLayer(options);
+ // Optionally, access the d3 color scale directly
+ // Can also set scale via hexLayer.colorScale(d3.scale.linear()...)
+ hexLayer.colorScale().range(['white', 'blue']);
+ hexLayer.data(heatdangandata);
+ /*var geoData = {
+     type: "FeatureCollection",
+     features: hexdata
+ };
+ var cscale = d3.scale.linear().domain([1000, 10000]).range(["#00FF00", "#FFA500"]);
+ var hexLayer = L.hexbinLayer(geoData, {
+     style: hexbinStyle
+ }).addTo(mymap);
+
+ function hexbinStyle(hexagons) {
+     hexagons.attr("stroke", "black").attr("fill", function(d) {
+         var values = d.map(function(elem) {
+             return elem[2].dangan;
+         })
+         var avg = d3.mean(d, function(d) {
+             return +d[2].dangan;
+         })
+         return cscale(avg);
+     });
+ }*/
  // control that shows state info on hover
  var info = L.control();
  info.onAdd = function(map) {
@@ -33,6 +103,66 @@
  function getColor(d) {
      return d > 14 ? '#800026' : d > 12 ? '#BD0026' : d > 10 ? '#E31A1C' : d > 8 ? '#FC4E2A' : d > 6 ? '#FD8D3C' : d > 4 ? '#FEB24C' : d > 2 ? '#FED976' : '#FFEDA0';
  }
+
+ function getxljunColor(d) {
+     return d > 28 ? '#800026' : d > 24 ? '#BD0026' : d > 20 ? '#E31A1C' : d > 16 ? '#FC4E2A' : d > 12 ? '#FD8D3C' : d > 8 ? '#FEB24C' : d > 4 ? '#FED976' : '#FFEDA0';
+ }
+
+ function getzcjunColor(d) {
+     return d > 14 ? '#800026' : d > 12 ? '#BD0026' : d > 10 ? '#E31A1C' : d > 8 ? '#FC4E2A' : d > 6 ? '#FD8D3C' : d > 4 ? '#FEB24C' : d > 2 ? '#FED976' : '#FFEDA0';
+ }
+
+ function getxcjunColor(d) {
+     return d > 35 ? '#800026' : d > 30 ? '#BD0026' : d > 25 ? '#E31A1C' : d > 20 ? '#FC4E2A' : d > 15 ? '#FD8D3C' : d > 10 ? '#FEB24C' : d > 5 ? '#FED976' : '#FFEDA0';
+ }
+ var xljunlegend = L.control({
+     position: 'bottomright'
+ });
+ xljunlegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0, 4, 8, 12, 16, 20, 24, 28],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + getxljunColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };
+ var zcjunlegend = L.control({
+     position: 'bottomright'
+ });
+ zcjunlegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0, 2, 4, 6, 8, 10, 12, 14],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + getzcjunColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };
+ var xcjunlegend = L.control({
+     position: 'bottomright'
+ });
+ xcjunlegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0, 5, 10, 15, 20, 25, 30, 35],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + getxcjunColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };
 
  function style(feature) {
      return {
@@ -79,7 +209,8 @@
  geojson = L.geoJson(jiedaodata, {
      style: style,
      onEachFeature: onEachFeature
- }).addTo(mymap);
+ });
+ geojson.addTo(mymap);
  var legend = L.control({
      position: 'bottomright'
  });
@@ -97,6 +228,7 @@
      return div;
  };
  legend.addTo(mymap);
+ var currentlegend = legend;
  var myChart = echarts.init(document.getElementById('zftxtu'));
  // 指定图表的配置项和数据
  option = {
@@ -107,7 +239,7 @@
          }
      },
      legend: {
-         data: ['2011年', '2012年'],
+         data: ['农村低保户数', '城镇低保户数'],
          textStyle: {
              color: '#fff',
              fontSize: 14
@@ -116,19 +248,19 @@
      grid: {
          left: '3%',
          right: '4%',
-         bottom: '3%',
+         bottom: '5%',
          containLabel: true
      },
-
      xAxis: {
          type: 'value',
          boundaryGap: [0, 0.01],
          axisLine: {
-                lineStyle: {
-                    color: '#aaa'
-                }
-            },
+             lineStyle: {
+                 color: '#aaa'
+             }
+         },
          axisLabel: {
+             rotate: 60,
              show: true,
              textStyle: {
                  color: '#fff'
@@ -137,12 +269,12 @@
      },
      yAxis: {
          type: 'category',
-         data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)'],
+         data: ['东山街道', '秣陵街道', '汤山街道', '淳化街道', '禄口街道', '江宁街道', '谷里街道', '湖熟街道', '横溪街道', '麒麟街道'],
          axisLine: {
-                lineStyle: {
-                    color: '#aaa'
-                }
-            },
+             lineStyle: {
+                 color: '#aaa'
+             }
+         },
          axisLabel: {
              show: true,
              textStyle: {
@@ -151,13 +283,13 @@
          }
      },
      series: [{
-         name: '2011年',
+         name: '农村低保户数',
          type: 'bar',
-         data: [18203, 23489, 29034, 104970, 131744, 630230]
+         data: [220, 468, 1013, 1345, 925, 1160, 539, 1291, 1916, 353]
      }, {
-         name: '2012年',
+         name: '城镇低保户数',
          type: 'bar',
-         data: [19325, 23438, 31000, 121594, 134141, 681807]
+         data: [238, 445, 65, 195, 176, 87, 13, 49, 86, 30]
      }]
  };
  // 使用刚指定的配置项和数据显示图表。
@@ -311,6 +443,9 @@
      switch (selected) {
          case '在乡老复员':
              currentitem = 'xljun';
+             currentlegend.remove();
+             xljunlegend.addTo(mymap);
+             currentlegend = xljunlegend;
              junstyle = function(feature) {
                  return {
                      weight: 1,
@@ -318,12 +453,15 @@
                      color: 'white',
                      dashArray: '3',
                      fillOpacity: 0.7,
-                     fillColor: getColor(feature.properties.xljun)
+                     fillColor: getxljunColor(feature.properties.xljun)
                  };
              }
              break;
          case '在职残疾':
              currentitem = 'zcjun';
+             currentlegend.remove();
+             zcjunlegend.addTo(mymap);
+             currentlegend = zcjunlegend;
              junstyle = function(feature) {
                  return {
                      weight: 1,
@@ -331,11 +469,15 @@
                      color: 'white',
                      dashArray: '3',
                      fillOpacity: 0.7,
-                     fillColor: getColor(feature.properties.zcjun)
+                     fillColor: getzcjunColor(feature.properties.zcjun)
                  };
              }
+             break;
          case '在乡残疾':
              currentitem = 'xcjun';
+             currentlegend.remove();
+             xcjunlegend.addTo(mymap);
+             currentlegend = xcjunlegend;
              junstyle = function(feature) {
                  return {
                      weight: 1,
@@ -343,10 +485,116 @@
                      color: 'white',
                      dashArray: '3',
                      fillOpacity: 0.7,
-                     fillColor: getColor(feature.properties.xcjun)
+                     fillColor: getxcjunColor(feature.properties.xcjun)
                  };
              }
              break;
      }
      geojson.setStyle(junstyle);
  });
+ $(".panel li p").click(function(e) {
+     switch (this.id) {
+         case 'allpeop':
+             $(".apolygon").hide();
+             $(this).children().show();
+             mymap.addLayer(geojson);
+             geojson.setStyle(style);
+             break;
+         case 'dibao':
+             if ($(".apiechart").is(":hidden")) {
+                 $(".apiechart").show();
+                 addchart();
+             } else {
+                 $(".apiechart").hide();
+                 dibaolayer.clearLayers();
+             }
+             break;
+         case 'jun':
+             $(".apolygon").hide();
+             $(this).children().show();
+             currentitem = 'xljun';
+             var junstyle = function(feature) {
+                 return {
+                     weight: 1,
+                     opacity: 1,
+                     color: 'white',
+                     dashArray: '3',
+                     fillOpacity: 0.7,
+                     fillColor: getxljunColor(feature.properties.xljun)
+                 };
+             }
+             mymap.addLayer(geojson);
+             geojson.setStyle(junstyle);
+             break;
+     }
+ });
+ $(".rightpanel li p").click(function(e) {
+     if ($(".rightpanel a").is(":hidden")) {
+         $(".rightpanel a").show();
+         hexLayer.addTo(mymap);
+     } else {
+         $(".rightpanel a").hide();
+         mymap.removeLayer(hexLayer);
+     }
+ });
+ var dibaolayer = L.featureGroup().addTo(mymap);;
+
+ function addchart() {
+     for (var i = 0; i < jiedaodata.features.length; i++) {
+         var val = jiedaodata.features[i].properties;
+         var pictures = L.marker([val.lat, val.lng], {
+             icon: L.divIcon({
+                 className: 'leaflet-echart-icon',
+                 iconSize: [100, 100],
+                 html: '<div id="marker' + val.GEOCODE + '" style="width: 100px; height: 100px; position: relative; background-color: transparent;">asd</div>'
+             })
+         }).addTo(dibaolayer);
+         // 基于准备好的dom，初始化echarts实例
+         var myChart = echarts.init(document.getElementById('marker' + val.GEOCODE));
+         // 指定图表的配置项和数据
+         option = {
+             tooltip: {
+                 trigger: 'item',
+                 formatter: "{b}: {c}"
+             },
+             series: [{
+                 type: 'pie',
+                 radius: ['10', '40'],
+                 avoidLabelOverlap: false,
+                 label: {
+                     normal: {
+                         show: false,
+                         position: 'center'
+                     },
+                     emphasis: {
+                         show: true,
+                         textStyle: {
+                             fontSize: '18',
+                             fontWeight: 'bold'
+                         }
+                     }
+                 },
+                 labelLine: {
+                     normal: {
+                         show: false
+                     }
+                 },
+                 data: [{
+                     value: val.countrype,
+                     name: '农村低保人数'
+                 }, {
+                     value: val.countryhu,
+                     name: '农村低保户数'
+                 }, {
+                     value: val.townhu,
+                     name: '城镇低保户数'
+                 }, {
+                     value: val.townpe,
+                     name: '城镇低保人数'
+                 }]
+             }]
+         };
+         // 使用刚指定的配置项和数据显示图表。
+         myChart.setOption(option);
+     };
+ }

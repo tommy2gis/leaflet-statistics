@@ -19,31 +19,32 @@
             
             .rightside {
                 position: absolute;
-                background-color: #000;
+                background-color: rgba(0, 0, 0, 0.8);
                 float: right;
                 height: 100%;
-                opacity: 0.5;
                 right: 0;
                 width: 320px;
                 z-index: 10000;
             }
             
-            .panel {
+            .panel, .rightpanel {
                 height: 100%;
                 margin: 0px;
                 padding: 0px;
             }
             
-            .panel li {
+            .panel li, .rightpanel li {
                 height: 30%;
+                list-style: outside none none;
             }
             
-            .panel li p {
+            .panel li p, .rightpanel li p {
                 border-bottom: 1px dashed;
                 color: #fff;
                 margin-left: 10px;
                 margin-right: 40px;
                 padding-left: 30px;
+                cursor: pointer;
             }
             
             .leaflet-right {
@@ -80,4 +81,9 @@
                 float: left;
                 margin-right: 8px;
                 opacity: 0.7;
+            }
+            
+            .panel a, .rightpanel a {
+                float: right;
+                font-weight: bold;
             }
