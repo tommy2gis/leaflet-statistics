@@ -3,6 +3,7 @@
      crs: L.CRS.CustomLevel,
      zoomControl: false
  }).setView([31.83, 118.8], 11);
+ mymap.attributionControl.setPrefix('<a href="http://www.njmap.gov.cn" title="南京天地图服务">南京天地图</a');
  new L.TileLayer.TDT.Vector().addTo(mymap);
  new L.TileLayer.TDT.VectorAnno().addTo(mymap);
  var heatdangandata = [];
@@ -17,7 +18,7 @@
  for (var i = 0; i < shequdata.features.length; i++) {
      var item = shequdata.features[i].properties;
      if (i < 40) {
-         shequnamedata.push(item.COMMUNAME);
+         shequnamedata.push(item.NAME);
          tangniaodata2.push(item.tangniaobin)
          gaoxueyadata2.push(item.gaoyabin)
          laoniandata2.push(item.oldpeop)
@@ -55,16 +56,24 @@
      valueFloor: 100,
      valueCeil: 3000, // override the color scale domain high value
      colorRange: ["#00FF00", "#FFA500"], // default color range for the heat map (see note below)
-     onmouseover: function(d, node, layer) {},
-     onmouseout: function(d, node, layer) {},
-     onclick: function(d, node, layer) {}
+     onmouseover: function(d, node, layer) {
+        var  data=layer;
+     },
+     onmouseout: function(d, node, layer) {
+        var  data=layer;
+     },
+     onclick: function(d, node, layer) {
+        var  data=layer;
+     }
  };
+
+
  // Create the hexbin layer and add it to the map
- var hexLayer = L.hexbinLayer(options);
+/* var hexLayer = L.hexbinLayer(options);
  // Optionally, access the d3 color scale directly
  // Can also set scale via hexLayer.colorScale(d3.scale.linear()...)
  hexLayer.colorScale().range(['white', '#E87C25']);
- hexLayer.data(tangniaodata);
+ hexLayer.data(tangniaodata);*/
  /*var geoData = {
      type: "FeatureCollection",
      features: hexdata
@@ -105,6 +114,15 @@
              break;
          case 'xcjun':
              this._div.innerHTML = '<h4>在乡残疾人数</h4>' + (props ? '<b>' + props.NAME + '</b><br />' + props.xcjun + ' (人)' : '');
+             break;
+             case 'tangniaobin':
+             this._div.innerHTML = '<h4>糖尿病建档数</h4>' + (props ? '<b>' + props.NAME + '</b><br />' + props.tangniaobin + ' (人)' : '');
+             break;
+             case 'gaoxueya':
+             this._div.innerHTML = '<h4>高血压建档数</h4>' + (props ? '<b>' + props.NAME + '</b><br />' + props.gaoyabin + ' (人)' : '');
+             break;
+             case 'laonian':
+             this._div.innerHTML = '<h4>老年人建档数</h4>' + (props ? '<b>' + props.NAME + '</b><br />' + props.oldpeop + ' (人)' : '');
              break;
      }
  };
@@ -184,6 +202,16 @@
          fillColor: getColor(feature.properties.peopnum)
      };
  }
+ function shequstyle(feature) {
+     return {
+         weight: 1,
+         opacity: 1,
+         color: 'white',
+         dashArray: '3',
+         fillOpacity: 0.7,
+         fillColor: tangniaoColor(feature.properties.tangniaobin)
+     };
+ }
 
  function highlightFeature(e) {
      var layer = e.target;
@@ -220,7 +248,15 @@
      style: style,
      onEachFeature: onEachFeature
  });
+
  geojson.addTo(mymap);
+
+  var shequgeojson = L.geoJson(shequdata, {
+     style: shequstyle,
+     onEachFeature: onEachFeature
+ });
+ 
+
  var legend = L.control({
      position: 'bottomright'
  });
@@ -565,10 +601,16 @@
  $(".rightpanel li p").click(function(e) {
      if ($(".rightpanel a").is(":hidden")) {
          $(".rightpanel a").show();
-         hexLayer.addTo(mymap);
+         shequgeojson.addTo(mymap);
+         currentitem='taoniaobin';
+          currentlegend.remove();
+        tangniaolegend.addTo(mymap);
+        currentlegend = tangniaolegend;
+        // hexLayer.addTo(mymap);
      } else {
          $(".rightpanel a").hide();
-         mymap.removeLayer(hexLayer);
+          mymap.removeLayer(shequgeojson);
+         //mymap.removeLayer(hexLayer);
      }
  });
  var dibaolayer = L.featureGroup().addTo(mymap);;
@@ -691,7 +733,9 @@
          type: 'bar',
          itemStyle: {
              normal: {
-                 color: '#E87C25'
+                color: function(params) {
+                   return tangniaoColor(params.value);
+                }
              }
          },
          data: tangniaodata2
@@ -700,7 +744,9 @@
          type: 'bar',
          itemStyle: {
              normal: {
-                 color: '#C1232B'
+                 color: function(params) {
+                   return gaoxueyaColor(params.value);
+                }
              }
          },
          data: gaoxueyadata2
@@ -709,7 +755,9 @@
          type: 'bar',
          itemStyle: {
              normal: {
-                 color: '#B5C334'
+                 color: function(params) {
+                   return laonianColor(params.value);
+                }
              }
          },
          data: laoniandata2
@@ -719,24 +767,131 @@
  danganChart.setOption(danganoption);
  danganChart.on("legendselectchanged", function(param) {
      var selected = param.name;
+     var  style
      switch (selected) {
          case '糖尿病建档数':
-             hexLayer.options.valueFloor = 100;
+             currentitem = 'tangniaobin';
+             currentlegend.remove();
+             tangniaolegend.addTo(mymap);
+             currentlegend = tangniaolegend;
+             style = function(feature) {
+                 return {
+                     weight: 1,
+                     opacity: 1,
+                     color: 'white',
+                     dashArray: '3',
+                     fillOpacity: 0.7,
+                     fillColor: tangniaoColor(feature.properties.tangniaobin)
+                 };
+             }
+             /*hexLayer.options.valueFloor = 100;
              hexLayer.options.valueCeil = 3000;
              hexLayer.colorScale().range(['white', '#E87C25']);
-             hexLayer.data(tangniaodata);
+             hexLayer.data(tangniaodata);*/
              break;
          case '高血压建档数':
-             hexLayer.options.valueFloor = 1000;
+             currentitem = 'gaoxueya';
+             currentlegend.remove();
+             gaoxueyalegend.addTo(mymap);
+             currentlegend = gaoxueyalegend;
+             style = function(feature) {
+                 return {
+                     weight: 1,
+                     opacity: 1,
+                     color: 'white',
+                     dashArray: '3',
+                     fillOpacity: 0.7,
+                     fillColor: gaoxueyaColor(feature.properties.gaoyabin)
+                 };
+             }
+            /* hexLayer.options.valueFloor = 1000;
              hexLayer.options.valueCeil = 8000;
              hexLayer.colorScale().range(['white', '#C1232B']);
-             hexLayer.data(gaoxueyadata);
+             hexLayer.data(gaoxueyadata);*/
              break;
          case '老年人建档数':
-             hexLayer.options.valueFloor = 1000;
+           currentitem = 'laonian';
+             currentlegend.remove();
+             laonianlegend.addTo(mymap);
+             currentlegend = laonianlegend;
+             style = function(feature) {
+                 return {
+                     weight: 1,
+                     opacity: 1,
+                     color: 'white',
+                     dashArray: '3',
+                     fillOpacity: 0.7,
+                     fillColor: laonianColor(feature.properties.oldpeop)
+                 };
+             }
+           /*  hexLayer.options.valueFloor = 1000;
              hexLayer.options.valueCeil = 8000;
              hexLayer.colorScale().range(['white', '#B5C334']);
-             hexLayer.data(laoniandata);
+             hexLayer.data(laoniandata);*/
              break;
      }
+     shequgeojson.setStyle(style);
  });
+
+  function tangniaoColor(d) {
+     return d > 4000 ? '#800026' : d > 3000 ? '#BD0026' : d > 2500 ? '#E31A1C' : d > 2000 ? '#FC4E2A' : d > 1500 ? '#FD8D3C' : d > 1000 ? '#FEB24C' : d > 500 ? '#FED976' : '#FFEDA0';
+ }
+
+ function gaoxueyaColor(d) {
+     return d > 7000 ? '#800026' : d > 6000 ? '#BD0026' : d > 5000 ? '#E31A1C' : d > 4000 ? '#FC4E2A' : d > 3000 ? '#FD8D3C' : d > 2000 ? '#FEB24C' : d > 1000 ? '#FED976' : '#FFEDA0';
+ }
+
+ function laonianColor(d) {
+     return d > 7000 ? '#175d08' : d > 6000 ? '#279c0d' : d > 5000 ? '#2fbc0f' : d > 4000 ? '#3beb13' : d > 3000 ? '#6ef151' : d > 2000 ? '#a3f690' : d > 1000 ? '#d7fbcf' : '#e4fcde';
+ }
+
+ var tangniaolegend = L.control({
+     position: 'bottomright'
+ });
+ tangniaolegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0,500, 1000, 1500, 2000, 2500, 3000, 4000],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + tangniaoColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };
+
+ var gaoxueyalegend = L.control({
+     position: 'bottomright'
+ });
+ gaoxueyalegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + gaoxueyaColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };
+
+ var laonianlegend = L.control({
+     position: 'bottomright'
+ });
+laonianlegend.onAdd = function(map) {
+     var div = L.DomUtil.create('div', 'info legend'),
+         grades = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000],
+         labels = [],
+         from, to;
+     for (var i = 0; i < grades.length; i++) {
+         from = grades[i];
+         to = grades[i + 1];
+         labels.push('<i style="background:' + laonianColor(from + 1) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+     }
+     div.innerHTML = labels.join('<br>');
+     return div;
+ };

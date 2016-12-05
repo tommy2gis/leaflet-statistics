@@ -1,12 +1,12 @@
             html, body {
                 width: 100%;
-                height: 100%;
+                height: 890px;
                 margin: 0;
             }
             
             #mapid {
                 width: 100%;
-                height: 100%;
+                height: 890px;
             }
             
             .panel div {
@@ -21,7 +21,7 @@
             
             .leftside {
                 background-color: rgba(0, 0, 0, 0.8);
-                height: 100%;
+                height: 890px;
                 position: absolute;
                 width: 320px;
                 z-index: 10000;
@@ -31,14 +31,14 @@
                 position: absolute;
                 background-color: rgba(0, 0, 0, 0.8);
                 float: right;
-                height: 100%;
+                height: 890px;
                 right: 0;
                 width: 320px;
                 z-index: 10000;
             }
             
             .panel, .rightpanel {
-                height: 100%;
+                height: 890px;
                 margin: 0px;
                 padding: 0px;
             }
@@ -51,6 +51,7 @@
             .panel li p, .rightpanel li p {
                 border-bottom: 1px dashed;
                 color: #fff;
+                font-size: 20px;
                 margin-left: 10px;
                 margin-right: 40px;
                 padding-left: 30px;

@@ -92,7 +92,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "安民村",
+            "NAME": "安民村",
             "COMMUID": "320115009012",
             "lat": "31.72022022",
             "long": "118.8102509",
@@ -132,7 +132,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "白云路社区",
+            "NAME": "白云路社区",
             "COMMUID": "320115005004",
             "lat": "31.78076997",
             "long": "118.85774808",
@@ -201,7 +201,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "柏树社区",
+            "NAME": "柏树社区",
             "COMMUID": "320115007009",
             "lat": "31.86498388",
             "long": "118.64215191",
@@ -230,7 +230,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "柏墅社区",
+            "NAME": "柏墅社区",
             "COMMUID": "320115004010",
             "lat": "31.92603912",
             "long": "119.02952038",
@@ -277,7 +277,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "滨淮社区",
+            "NAME": "滨淮社区",
             "COMMUID": "320115004015",
             "lat": "31.90295655",
             "long": "119.09644278",
@@ -344,7 +344,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "滨江开发区",
+            "NAME": "滨江开发区",
             "COMMUID": "320115404001",
             "lat": "31.84153337",
             "long": "118.54417753",
@@ -409,7 +409,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "曹村社区",
+            "NAME": "曹村社区",
             "COMMUID": "320115005025",
             "lat": "31.69253138",
             "long": "118.92597992",
@@ -449,7 +449,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "茶场社区",
+            "NAME": "茶场社区",
             "COMMUID": "320115403005",
             "lat": "31.9245976",
             "long": "118.89199963",
@@ -510,7 +510,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "茶岗社区",
+            "NAME": "茶岗社区",
             "COMMUID": "320115004004",
             "lat": "31.94369177",
             "long": "119.01866389",
@@ -571,7 +571,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "岔路社区",
+            "NAME": "岔路社区",
             "COMMUID": "320115001004",
             "lat": "31.96466514",
             "long": "118.8060366",
@@ -621,7 +621,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "陈巷社区",
+            "NAME": "陈巷社区",
             "COMMUID": "320115005019",
             "lat": "31.6974676",
             "long": "118.83693783",
@@ -678,7 +678,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "晨光社区",
+            "NAME": "晨光社区",
             "COMMUID": "320115010005",
             "lat": "32.05924493",
             "long": "118.95244008",
@@ -712,7 +712,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "成功社区",
+            "NAME": "成功社区",
             "COMMUID": "320115005005",
             "lat": "31.78430527",
             "long": "118.87597952",
@@ -784,7 +784,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "成山社区",
+            "NAME": "成山社区",
             "COMMUID": "320115403002",
             "lat": "31.93308463",
             "long": "118.86121616",
@@ -855,7 +855,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "淳化社区",
+            "NAME": "淳化社区",
             "COMMUID": "320115004001",
             "lat": "31.95458548",
             "long": "118.93629863",
@@ -937,7 +937,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "大庙社区",
+            "NAME": "大庙社区",
             "COMMUID": "320115006022",
             "lat": "31.73884687",
             "long": "118.67672666",
@@ -1000,7 +1000,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "丹桂社区",
+            "NAME": "丹桂社区",
             "COMMUID": "320115008016",
             "lat": "31.86265046",
             "long": "119.0291396",
@@ -1070,7 +1070,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "丹阳社区",
+            "NAME": "丹阳社区",
             "COMMUID": "320115009021",
             "lat": "31.64894699",
             "long": "118.71883283",
@@ -1131,7 +1131,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东大山",
+            "NAME": "东大山",
             "COMMUID": "320115002403",
             "lat": "31.85803909",
             "long": "118.77685213",
@@ -1187,7 +1187,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东方社区",
+            "NAME": "东方社区",
             "COMMUID": "320115403009",
             "lat": "31.91005959",
             "long": "118.88786312",
@@ -1258,7 +1258,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东流村",
+            "NAME": "东流村",
             "COMMUID": "320115010007",
             "lat": "32.08049579",
             "long": "118.95110552",
@@ -1302,7 +1302,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东山社区",
+            "NAME": "东山社区",
             "COMMUID": "320115001008",
             "lat": "31.95803015",
             "long": "118.83942656",
@@ -1341,7 +1341,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东善桥社区",
+            "NAME": "东善桥社区",
             "COMMUID": "320115002013",
             "lat": "31.86827671",
             "long": "118.76814198",
@@ -1377,7 +1377,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东旺社区",
+            "NAME": "东旺社区",
             "COMMUID": "320115002005",
             "lat": "31.83799296",
             "long": "118.83846672",
@@ -1422,7 +1422,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "东阳社区",
+            "NAME": "东阳社区",
             "COMMUID": "320115008012",
             "lat": "31.83864666",
             "long": "118.94570381",
@@ -1463,7 +1463,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "方山风景区",
+            "NAME": "方山风景区",
             "COMMUID": "320115403008",
             "lat": "31.89913031",
             "long": "118.87256563",
@@ -1503,7 +1503,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "方山社区",
+            "NAME": "方山社区",
             "COMMUID": "320115403014",
             "lat": "31.8907384",
             "long": "118.88851873",
@@ -1577,7 +1577,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "凤凰村委会",
+            "NAME": "凤凰村委会",
             "COMMUID": "320115002003",
             "lat": "31.8143018",
             "long": "118.81374084",
@@ -1652,7 +1652,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "阜东社区",
+            "NAME": "阜东社区",
             "COMMUID": "320115003007",
             "lat": "31.98690659",
             "long": "119.09904555",
@@ -1700,7 +1700,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "阜庄社区",
+            "NAME": "阜庄社区",
             "COMMUID": "320115003005",
             "lat": "32.00703384",
             "long": "119.07194226",
@@ -1776,7 +1776,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "甘泉湖社区",
+            "NAME": "甘泉湖社区",
             "COMMUID": "320115009003",
             "lat": "31.76549188",
             "long": "118.72715253",
@@ -1829,7 +1829,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "甘西社区",
+            "NAME": "甘西社区",
             "COMMUID": "320115009006",
             "lat": "31.75677742",
             "long": "118.77322966",
@@ -1877,7 +1877,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "高庄社区",
+            "NAME": "高庄社区",
             "COMMUID": "320115003006",
             "lat": "32.01037578",
             "long": "119.03923391",
@@ -1923,7 +1923,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "埂方社区",
+            "NAME": "埂方社区",
             "COMMUID": "320115005024",
             "lat": "31.69572702",
             "long": "118.89900188",
@@ -1954,7 +1954,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "工业园区",
+            "NAME": "工业园区",
             "COMMUID": "320115002014",
             "lat": "31.87187977",
             "long": "118.78667768",
@@ -2029,7 +2029,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "公塘社区",
+            "NAME": "公塘社区",
             "COMMUID": "320115007005",
             "lat": "31.81228589",
             "long": "118.69669107",
@@ -2098,7 +2098,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "古泉社区",
+            "NAME": "古泉社区",
             "COMMUID": "320115003013",
             "lat": "32.05663647",
             "long": "119.00544244",
@@ -2158,7 +2158,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "谷里社区",
+            "NAME": "谷里社区",
             "COMMUID": "320115007001",
             "lat": "31.86350142",
             "long": "118.69235029",
@@ -2218,7 +2218,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "官长村",
+            "NAME": "官长村",
             "COMMUID": "320115009015",
             "lat": "31.68719445",
             "long": "118.77707346",
@@ -2274,7 +2274,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "和进社区",
+            "NAME": "和进社区",
             "COMMUID": "320115008004",
             "lat": "31.87077133",
             "long": "118.95266318",
@@ -2322,7 +2322,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "和平社区",
+            "NAME": "和平社区",
             "COMMUID": "320115008017",
             "lat": "31.79566835",
             "long": "118.91144825",
@@ -2382,7 +2382,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "河北社区",
+            "NAME": "河北社区",
             "COMMUID": "320115008006",
             "lat": "31.89874735",
             "long": "118.98720155",
@@ -2423,7 +2423,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "河南社区",
+            "NAME": "河南社区",
             "COMMUID": "320115008014",
             "lat": "31.85435198",
             "long": "118.98439758",
@@ -2462,7 +2462,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "河西社区",
+            "NAME": "河西社区",
             "COMMUID": "320115006013",
             "lat": "31.79909072",
             "long": "118.61004298",
@@ -2527,7 +2527,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "荷花社区",
+            "NAME": "荷花社区",
             "COMMUID": "320115006108",
             "lat": "31.76751284",
             "long": "118.64135612",
@@ -2581,7 +2581,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "横岭社区",
+            "NAME": "横岭社区",
             "COMMUID": "320115403004",
             "lat": "31.9111457",
             "long": "118.86176405",
@@ -2701,7 +2701,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "横山村",
+            "NAME": "横山村",
             "COMMUID": "320115009017",
             "lat": "31.64573454",
             "long": "118.80729447",
@@ -2764,7 +2764,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "横溪社区",
+            "NAME": "横溪社区",
             "COMMUID": "320115009011",
             "lat": "31.71195806",
             "long": "118.76683346",
@@ -2812,7 +2812,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "红旗村",
+            "NAME": "红旗村",
             "COMMUID": "320115009010",
             "lat": "31.71604774",
             "long": "118.7383389",
@@ -2869,7 +2869,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "洪幕社区",
+            "NAME": "洪幕社区",
             "COMMUID": "320115006021",
             "lat": "31.75645063",
             "long": "118.56722215",
@@ -2923,7 +2923,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "湖山社区",
+            "NAME": "湖山社区",
             "COMMUID": "320115003016",
             "lat": "32.08551439",
             "long": "119.01378198",
@@ -2982,7 +2982,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "湖熟社区",
+            "NAME": "湖熟社区",
             "COMMUID": "320115008005",
             "lat": "31.87592718",
             "long": "118.97713032",
@@ -3049,7 +3049,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "花塘社区",
+            "NAME": "花塘社区",
             "COMMUID": "320115006012",
             "lat": "31.81033532",
             "long": "118.65834031",
@@ -3119,7 +3119,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "黄桥社区",
+            "NAME": "黄桥社区",
             "COMMUID": "320115005013",
             "lat": "31.75433064",
             "long": "118.86289159",
@@ -3153,7 +3153,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "机场社区",
+            "NAME": "机场社区",
             "COMMUID": "320115005008",
             "lat": "31.77270695",
             "long": "118.87075755",
@@ -3178,7 +3178,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "吉山社区",
+            "NAME": "吉山社区",
             "COMMUID": "320115002011",
             "lat": "31.83354085",
             "long": "118.72995408",
@@ -3221,7 +3221,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "建东村委会",
+            "NAME": "建东村委会",
             "COMMUID": "320115002007",
             "lat": "31.8232679",
             "long": "118.85849551",
@@ -3302,7 +3302,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "建南社区",
+            "NAME": "建南社区",
             "COMMUID": "320115010004",
             "lat": "32.00762044",
             "long": "118.89743449",
@@ -3368,7 +3368,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "建设社区",
+            "NAME": "建设社区",
             "COMMUID": "320115003002",
             "lat": "32.02722814",
             "long": "119.0286348",
@@ -3414,7 +3414,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "健康社区",
+            "NAME": "健康社区",
             "COMMUID": "320115403013",
             "lat": "31.87891954",
             "long": "118.87716332",
@@ -3467,7 +3467,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "箭塘社区",
+            "NAME": "箭塘社区",
             "COMMUID": "320115007006",
             "lat": "31.89403898",
             "long": "118.70402254",
@@ -3544,7 +3544,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "江宁社区",
+            "NAME": "江宁社区",
             "COMMUID": "320115006003",
             "lat": "31.87154825",
             "long": "118.60800789",
@@ -3596,7 +3596,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "解溪社区",
+            "NAME": "解溪社区",
             "COMMUID": "320115403015",
             "lat": "31.88340367",
             "long": "118.90491277",
@@ -3648,7 +3648,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "金桥社区",
+            "NAME": "金桥社区",
             "COMMUID": "320115008013",
             "lat": "31.8411335",
             "long": "118.96461453",
@@ -3704,7 +3704,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "荆刘社区",
+            "NAME": "荆刘社区",
             "COMMUID": "320115007011",
             "lat": "31.91652049",
             "long": "118.68584412",
@@ -3747,7 +3747,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "晶明社区",
+            "NAME": "晶明社区",
             "COMMUID": "320115008009",
             "lat": "31.83711241",
             "long": "118.88458281",
@@ -3829,7 +3829,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "空港开发区",
+            "NAME": "空港开发区",
             "COMMUID": "320115405001",
             "lat": "31.78021998",
             "long": "118.81036477",
@@ -3907,7 +3907,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "溧塘社区",
+            "NAME": "溧塘社区",
             "COMMUID": "320115005023",
             "lat": "31.66858376",
             "long": "118.87921575",
@@ -3947,7 +3947,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "林场",
+            "NAME": "林场",
             "COMMUID": "320115002402",
             "lat": "31.86599232",
             "long": "118.75485749",
@@ -4005,7 +4005,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "陵里社区",
+            "NAME": "陵里社区",
             "COMMUID": "320115403003",
             "lat": "31.94675244",
             "long": "118.88378327",
@@ -4047,7 +4047,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "龙都社区",
+            "NAME": "龙都社区",
             "COMMUID": "320115008011",
             "lat": "31.83064913",
             "long": "118.92543338",
@@ -4225,7 +4225,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "龙尚社区",
+            "NAME": "龙尚社区",
             "COMMUID": "320115003012",
             "lat": "32.0102477",
             "long": "118.98423734",
@@ -4277,7 +4277,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "陆纲社区",
+            "NAME": "陆纲社区",
             "COMMUID": "320115005001",
             "lat": "31.79523328",
             "long": "118.84208905",
@@ -4329,7 +4329,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "陆郎社区",
+            "NAME": "陆郎社区",
             "COMMUID": "320115006014",
             "lat": "31.79814086",
             "long": "118.6346481",
@@ -4368,7 +4368,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "路西社区",
+            "NAME": "路西社区",
             "COMMUID": "320115003004",
             "lat": "32.02911974",
             "long": "119.05100613",
@@ -4424,7 +4424,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "绿杨社区",
+            "NAME": "绿杨社区",
             "COMMUID": "320115008019",
             "lat": "31.81317506",
             "long": "118.96139603",
@@ -4461,7 +4461,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "马铺社区",
+            "NAME": "马铺社区",
             "COMMUID": "320115005002",
             "lat": "31.80586709",
             "long": "118.86263596",
@@ -4495,7 +4495,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "茅亭社区",
+            "NAME": "茅亭社区",
             "COMMUID": "320115005007",
             "lat": "31.76961293",
             "long": "118.85542254",
@@ -4576,7 +4576,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "孟墓社区",
+            "NAME": "孟墓社区",
             "COMMUID": "320115003011",
             "lat": "31.98916249",
             "long": "118.98983139",
@@ -4647,7 +4647,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "孟塘社区",
+            "NAME": "孟塘社区",
             "COMMUID": "320115003015",
             "lat": "32.09131382",
             "long": "119.05296718",
@@ -4707,7 +4707,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "庙庄社区",
+            "NAME": "庙庄社区",
             "COMMUID": "320115006010",
             "lat": "31.83600404",
             "long": "118.64299015",
@@ -4750,7 +4750,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "民主社区",
+            "NAME": "民主社区",
             "COMMUID": "320115004016",
             "lat": "31.88167237",
             "long": "119.0878235",
@@ -4802,7 +4802,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "牧龙社区",
+            "NAME": "牧龙社区",
             "COMMUID": "320115006005",
             "lat": "31.81136974",
             "long": "118.58259029",
@@ -4862,7 +4862,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "南京路口国际机场",
+            "NAME": "南京路口国际机场",
             "COMMUID": "320115005014",
             "lat": "31.73634903",
             "long": "118.867433",
@@ -4900,7 +4900,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "南山湖社区",
+            "NAME": "南山湖社区",
             "COMMUID": "320115006016",
             "lat": "31.78148147",
             "long": "118.56645518",
@@ -4941,7 +4941,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "宁光村",
+            "NAME": "宁光村",
             "COMMUID": "320115009014",
             "lat": "31.68976908",
             "long": "118.73531712",
@@ -4997,7 +4997,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "宁西社区",
+            "NAME": "宁西社区",
             "COMMUID": "320115003008",
             "lat": "31.98444946",
             "long": "119.07615468",
@@ -5062,7 +5062,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "牛首山管委会",
+            "NAME": "牛首山管委会",
             "COMMUID": "320115407001",
             "lat": "31.89914686",
             "long": "118.73926985",
@@ -5119,7 +5119,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "牌坊社区",
+            "NAME": "牌坊社区",
             "COMMUID": "320115006015",
             "lat": "31.78760934",
             "long": "118.66870741",
@@ -5154,7 +5154,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "彭福社区",
+            "NAME": "彭福社区",
             "COMMUID": "320115005026",
             "lat": "31.70323862",
             "long": "118.93484215",
@@ -5194,7 +5194,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "铺头社区",
+            "NAME": "铺头社区",
             "COMMUID": "320115005009",
             "lat": "31.77568904",
             "long": "118.88705651",
@@ -5238,7 +5238,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "麒麟科创园",
+            "NAME": "麒麟科创园",
             "COMMUID": "320115406001",
             "lat": "32.02699111",
             "long": "118.87943177",
@@ -5310,7 +5310,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "麒麟门社区",
+            "NAME": "麒麟门社区",
             "COMMUID": "320115010001",
             "lat": "32.04568125",
             "long": "118.92585043",
@@ -5378,7 +5378,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "麒麟铺社区",
+            "NAME": "麒麟铺社区",
             "COMMUID": "320115010002",
             "lat": "32.06858987",
             "long": "118.92579035",
@@ -5428,7 +5428,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "钱家社区",
+            "NAME": "钱家社区",
             "COMMUID": "320115008021",
             "lat": "31.779497",
             "long": "118.95442875",
@@ -5476,7 +5476,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "桥南社区",
+            "NAME": "桥南社区",
             "COMMUID": "320115002004",
             "lat": "31.82784659",
             "long": "118.8258324",
@@ -5527,7 +5527,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "桥头社区",
+            "NAME": "桥头社区",
             "COMMUID": "320115403001",
             "lat": "31.93778362",
             "long": "118.84340379",
@@ -5585,7 +5585,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "亲见社区",
+            "NAME": "亲见社区",
             "COMMUID": "320115007002",
             "lat": "31.85566454",
             "long": "118.66128297",
@@ -5652,7 +5652,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "青林社区",
+            "NAME": "青林社区",
             "COMMUID": "320115003014",
             "lat": "32.07466518",
             "long": "119.0788474",
@@ -5724,7 +5724,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "青龙社区",
+            "NAME": "青龙社区",
             "COMMUID": "320115004003",
             "lat": "31.95455993",
             "long": "118.98718946",
@@ -5786,7 +5786,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "青山社区",
+            "NAME": "青山社区",
             "COMMUID": "320115004002",
             "lat": "31.94846971",
             "long": "118.95977808",
@@ -5839,7 +5839,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "清修社区",
+            "NAME": "清修社区",
             "COMMUID": "320115006011",
             "lat": "31.82031395",
             "long": "118.60621842",
@@ -5910,7 +5910,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "泉水社区",
+            "NAME": "泉水社区",
             "COMMUID": "320115010003",
             "lat": "32.02495088",
             "long": "118.92130618",
@@ -5986,7 +5986,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "软件园",
+            "NAME": "软件园",
             "COMMUID": "320115402001",
             "lat": "31.83879622",
             "long": "118.76301112",
@@ -6032,7 +6032,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "三界社区",
+            "NAME": "三界社区",
             "COMMUID": "320115008015",
             "lat": "31.85726946",
             "long": "119.00254236",
@@ -6131,7 +6131,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "桑园社区",
+            "NAME": "桑园社区",
             "COMMUID": "320115005021",
             "lat": "31.67233901",
             "long": "118.83467595",
@@ -6185,7 +6185,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "山景村",
+            "NAME": "山景村",
             "COMMUID": "320115009013",
             "lat": "31.6916894",
             "long": "118.7041393",
@@ -6332,7 +6332,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "上坊片区",
+            "NAME": "上坊片区",
             "COMMUID": "320115001017",
             "lat": "31.97474648",
             "long": "118.88203483",
@@ -6376,7 +6376,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "上峰社区",
+            "NAME": "上峰社区",
             "COMMUID": "320115003009",
             "lat": "31.98751181",
             "long": "119.04714205",
@@ -6454,7 +6454,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "上湖社区",
+            "NAME": "上湖社区",
             "COMMUID": "320115006009",
             "lat": "31.84146617",
             "long": "118.62165677",
@@ -6522,7 +6522,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "上穆社区",
+            "NAME": "上穆社区",
             "COMMUID": "320115005010",
             "lat": "31.75276679",
             "long": "118.79514289",
@@ -6561,7 +6561,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "尚洪社区",
+            "NAME": "尚洪社区",
             "COMMUID": "320115005016",
             "lat": "31.70937549",
             "long": "118.85783549",
@@ -6599,7 +6599,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "尚桥社区",
+            "NAME": "尚桥社区",
             "COMMUID": "320115008018",
             "lat": "31.81011436",
             "long": "118.93168945",
@@ -6638,7 +6638,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "邵圣社区",
+            "NAME": "邵圣社区",
             "COMMUID": "320115001005",
             "lat": "31.97637246",
             "long": "118.82374169",
@@ -6719,7 +6719,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "佘村社区",
+            "NAME": "佘村社区",
             "COMMUID": "320115001016",
             "lat": "31.98686274",
             "long": "118.93400484",
@@ -6776,7 +6776,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "胜家桥社区",
+            "NAME": "胜家桥社区",
             "COMMUID": "320115002009",
             "lat": "31.81134423",
             "long": "118.74500193",
@@ -6825,7 +6825,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "盛江社区",
+            "NAME": "盛江社区",
             "COMMUID": "320115006004",
             "lat": "31.84709332",
             "long": "118.60426887",
@@ -6876,7 +6876,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "石坝社区",
+            "NAME": "石坝社区",
             "COMMUID": "320115007008",
             "lat": "31.88492692",
             "long": "118.66090196",
@@ -6919,7 +6919,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "石埝社区",
+            "NAME": "石埝社区",
             "COMMUID": "320115005017",
             "lat": "31.70895462",
             "long": "118.88195499",
@@ -6980,7 +6980,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "石塘村",
+            "NAME": "石塘村",
             "COMMUID": "320115009007",
             "lat": "31.72544569",
             "long": "118.70190859",
@@ -7041,7 +7041,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "汤山社区",
+            "NAME": "汤山社区",
             "COMMUID": "320115003001",
             "lat": "32.05661743",
             "long": "119.04561292",
@@ -7098,7 +7098,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "陶吴社区",
+            "NAME": "陶吴社区",
             "COMMUID": "320115009004",
             "lat": "31.78151874",
             "long": "118.7691061",
@@ -7153,7 +7153,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "天然社区",
+            "NAME": "天然社区",
             "COMMUID": "320115006020",
             "lat": "31.74893952",
             "long": "118.53548222",
@@ -7204,7 +7204,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "田园社区",
+            "NAME": "田园社区",
             "COMMUID": "320115004007",
             "lat": "31.91201026",
             "long": "118.95121672",
@@ -7236,7 +7236,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "铜山社区",
+            "NAME": "铜山社区",
             "COMMUID": "320115005020",
             "lat": "31.68724753",
             "long": "118.85765592",
@@ -7286,7 +7286,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "徒盖社区",
+            "NAME": "徒盖社区",
             "COMMUID": "320115005015",
             "lat": "31.71714947",
             "long": "118.83107792",
@@ -7328,7 +7328,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "土桥社区",
+            "NAME": "土桥社区",
             "COMMUID": "320115004005",
             "lat": "31.93750954",
             "long": "119.05737774",
@@ -7365,7 +7365,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "双岗社区",
+            "NAME": "双岗社区",
             "COMMUID": "320115004006",
             "lat": "31.92350016",
             "long": "118.94085768",
@@ -7414,7 +7414,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "双塘社区",
+            "NAME": "双塘社区",
             "COMMUID": "320115007003",
             "lat": "31.84975867",
             "long": "118.71464088",
@@ -7461,7 +7461,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "双新社区",
+            "NAME": "双新社区",
             "COMMUID": "320115008001",
             "lat": "31.85571298",
             "long": "118.88271972",
@@ -7499,7 +7499,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "司家社区",
+            "NAME": "司家社区",
             "COMMUID": "320115006002",
             "lat": "31.87363007",
             "long": "118.58282233",
@@ -7543,7 +7543,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "宋墅社区",
+            "NAME": "宋墅社区",
             "COMMUID": "320115403006",
             "lat": "31.92945787",
             "long": "118.90381817",
@@ -7594,7 +7594,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "索墅社区",
+            "NAME": "索墅社区",
             "COMMUID": "320115004009",
             "lat": "31.92608359",
             "long": "118.99616313",
@@ -7671,7 +7671,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "锁石社区",
+            "NAME": "锁石社区",
             "COMMUID": "320115010006",
             "lat": "32.05117288",
             "long": "118.96653047",
@@ -7703,7 +7703,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "外港社区",
+            "NAME": "外港社区",
             "COMMUID": "320115001009",
             "lat": "31.9477772",
             "long": "118.83034405",
@@ -7762,7 +7762,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "万安社区",
+            "NAME": "万安社区",
             "COMMUID": "320115008002",
             "lat": "31.86237911",
             "long": "118.90183673",
@@ -7792,7 +7792,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "文化产业园",
+            "NAME": "文化产业园",
             "COMMUID": "320115002401",
             "lat": "31.84244693",
             "long": "118.73307357",
@@ -7847,7 +7847,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "吴墅社区",
+            "NAME": "吴墅社区",
             "COMMUID": "320115004008",
             "lat": "31.91726249",
             "long": "118.96963842",
@@ -7905,7 +7905,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西城社区",
+            "NAME": "西城社区",
             "COMMUID": "320115004013",
             "lat": "31.89851303",
             "long": "119.03511753",
@@ -7943,7 +7943,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西村靶场",
+            "NAME": "西村靶场",
             "COMMUID": "320115010009",
             "lat": "32.04402815",
             "long": "118.94552495",
@@ -7956,7 +7956,7 @@ var  shequdata={
         "type": "Feature",
         "geometry": null,
         "properties": {
-            "COMMUNAME": "西村战术场",
+            "NAME": "西村战术场",
             "COMMUID": "320115010010",
             "lat": "32.0550493",
             "long": "118.93491919",
@@ -8052,7 +8052,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西岗社区",
+            "NAME": "西岗社区",
             "COMMUID": "320115009020",
             "lat": "31.65452144",
             "long": "118.66910941",
@@ -8092,7 +8092,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西宁社区",
+            "NAME": "西宁社区",
             "COMMUID": "320115006017",
             "lat": "31.77444985",
             "long": "118.60564757",
@@ -8155,7 +8155,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西泉社区",
+            "NAME": "西泉社区",
             "COMMUID": "320115009002",
             "lat": "31.81118887",
             "long": "118.78675829",
@@ -8281,7 +8281,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "西阳社区",
+            "NAME": "西阳社区",
             "COMMUID": "320115009001",
             "lat": "31.7941945",
             "long": "118.74114531",
@@ -8321,7 +8321,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "霞辉庙社区",
+            "NAME": "霞辉庙社区",
             "COMMUID": "320115002008",
             "lat": "31.81558786",
             "long": "118.76652552",
@@ -8352,7 +8352,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "下墟社区",
+            "NAME": "下墟社区",
             "COMMUID": "320115002001",
             "lat": "31.91308683",
             "long": "118.82903387",
@@ -8401,7 +8401,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "向阳社区",
+            "NAME": "向阳社区",
             "COMMUID": "320115007007",
             "lat": "31.88706095",
             "long": "118.6796112",
@@ -8444,7 +8444,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "小彭社区",
+            "NAME": "小彭社区",
             "COMMUID": "320115005018",
             "lat": "31.71805676",
             "long": "118.90918485",
@@ -8479,7 +8479,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "晓里社区",
+            "NAME": "晓里社区",
             "COMMUID": "320115001010",
             "lat": "31.95528052",
             "long": "118.85167489",
@@ -8533,7 +8533,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "谢村社区",
+            "NAME": "谢村社区",
             "COMMUID": "320115005022",
             "lat": "31.67426769",
             "long": "118.86175055",
@@ -8575,7 +8575,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新杭社区",
+            "NAME": "新杭社区",
             "COMMUID": "320115009005",
             "lat": "31.76222223",
             "long": "118.75635233",
@@ -8627,7 +8627,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新华社区",
+            "NAME": "新华社区",
             "COMMUID": "320115403011",
             "lat": "31.90288514",
             "long": "118.92873525",
@@ -8686,7 +8686,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新林社区",
+            "NAME": "新林社区",
             "COMMUID": "320115403016",
             "lat": "31.87981006",
             "long": "118.92461858",
@@ -8725,7 +8725,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新农社区",
+            "NAME": "新农社区",
             "COMMUID": "320115008010",
             "lat": "31.82448551",
             "long": "118.90463236",
@@ -8773,7 +8773,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新生社区",
+            "NAME": "新生社区",
             "COMMUID": "320115005011",
             "lat": "31.75117779",
             "long": "118.82625628",
@@ -8804,7 +8804,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新铜社区",
+            "NAME": "新铜社区",
             "COMMUID": "320115006006",
             "lat": "31.79473273",
             "long": "118.55419713",
@@ -8838,7 +8838,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新兴社区",
+            "NAME": "新兴社区",
             "COMMUID": "320115004011",
             "lat": "31.92001343",
             "long": "119.05824492",
@@ -8918,7 +8918,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新扬社区",
+            "NAME": "新扬社区",
             "COMMUID": "320115009009",
             "lat": "31.73317264",
             "long": "118.79592394",
@@ -8986,7 +8986,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新跃社区",
+            "NAME": "新跃社区",
             "COMMUID": "320115008008",
             "lat": "31.88103177",
             "long": "119.01013371",
@@ -9037,7 +9037,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "新洲社区",
+            "NAME": "新洲社区",
             "COMMUID": "320115006001",
             "lat": "31.90179237",
             "long": "118.57214787",
@@ -9100,7 +9100,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "星辉社区",
+            "NAME": "星辉社区",
             "COMMUID": "320115006008",
             "lat": "31.78875117",
             "long": "118.50856883",
@@ -9168,7 +9168,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "徐高村",
+            "NAME": "徐高村",
             "COMMUID": "320115009018",
             "lat": "31.67387748",
             "long": "118.67574253",
@@ -9238,7 +9238,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "徐慕社区",
+            "NAME": "徐慕社区",
             "COMMUID": "320115008022",
             "lat": "31.79511393",
             "long": "118.97917044",
@@ -9311,7 +9311,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "许呈村",
+            "NAME": "许呈村",
             "COMMUID": "320115009016",
             "lat": "31.68481686",
             "long": "118.80631312",
@@ -9365,7 +9365,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "杨村社区",
+            "NAME": "杨村社区",
             "COMMUID": "320115403012",
             "lat": "31.8847188",
             "long": "118.8601056",
@@ -9418,7 +9418,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "杨柳湖社区",
+            "NAME": "杨柳湖社区",
             "COMMUID": "320115008003",
             "lat": "31.8585466",
             "long": "118.93277383",
@@ -9451,7 +9451,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "杨树湾社区",
+            "NAME": "杨树湾社区",
             "COMMUID": "320115005006",
             "lat": "31.79441951",
             "long": "118.88895483",
@@ -9510,7 +9510,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "耀华社区",
+            "NAME": "耀华社区",
             "COMMUID": "320115008007",
             "lat": "31.90888204",
             "long": "119.00498709",
@@ -9543,7 +9543,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "叶村社区",
+            "NAME": "叶村社区",
             "COMMUID": "320115006007",
             "lat": "31.7910082",
             "long": "118.54373938",
@@ -9576,7 +9576,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "殷巷社区",
+            "NAME": "殷巷社区",
             "COMMUID": "320115002002",
             "lat": "31.91758143",
             "long": "118.81730725",
@@ -9621,7 +9621,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "永宁社区",
+            "NAME": "永宁社区",
             "COMMUID": "320115403007",
             "lat": "31.9300631",
             "long": "118.9178575",
@@ -9673,7 +9673,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "永兴社区",
+            "NAME": "永兴社区",
             "COMMUID": "320115005012",
             "lat": "31.76220784",
             "long": "118.85174524",
@@ -9722,7 +9722,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "勇跃村",
+            "NAME": "勇跃村",
             "COMMUID": "320115009019",
             "lat": "31.66809029",
             "long": "118.72942045",
@@ -9773,7 +9773,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "雨花-吉山社区",
+            "NAME": "雨花-吉山社区",
             "COMMUID": "320115002404",
             "lat": "31.8701061",
             "long": "118.73678767",
@@ -9846,7 +9846,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "雨花-青龙山社区",
+            "NAME": "雨花-青龙山社区",
             "COMMUID": "320115004401",
             "lat": "31.95239428",
             "long": "118.96254524",
@@ -9911,7 +9911,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "雨花-青龙社区",
+            "NAME": "雨花-青龙社区",
             "COMMUID": "320115008400",
             "lat": "31.89009822",
             "long": "118.95846586",
@@ -9950,7 +9950,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "玉墅社区",
+            "NAME": "玉墅社区",
             "COMMUID": "320115403010",
             "lat": "31.90899737",
             "long": "118.90767888",
@@ -10038,7 +10038,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "元山社区",
+            "NAME": "元山社区",
             "COMMUID": "320115002010",
             "lat": "31.81529611",
             "long": "118.72192842",
@@ -10106,7 +10106,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "袁家边社区",
+            "NAME": "袁家边社区",
             "COMMUID": "320115010008",
             "lat": "32.09805833",
             "long": "118.96107492",
@@ -10157,7 +10157,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "云台村",
+            "NAME": "云台村",
             "COMMUID": "320115009008",
             "lat": "31.73646578",
             "long": "118.74326774",
@@ -10197,7 +10197,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "张桥社区",
+            "NAME": "张桥社区",
             "COMMUID": "320115005003",
             "lat": "31.80777053",
             "long": "118.87861529",
@@ -10271,7 +10271,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "张溪社区",
+            "NAME": "张溪社区",
             "COMMUID": "320115007004",
             "lat": "31.83178214",
             "long": "118.67642998",
@@ -10307,7 +10307,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "章村社区",
+            "NAME": "章村社区",
             "COMMUID": "320115001007",
             "lat": "31.96493406",
             "long": "118.84932146",
@@ -10359,7 +10359,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "中前社区",
+            "NAME": "中前社区",
             "COMMUID": "320115001006",
             "lat": "31.96942432",
             "long": "118.83371211",
@@ -10415,7 +10415,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "周村社区",
+            "NAME": "周村社区",
             "COMMUID": "320115007010",
             "lat": "31.91634695",
             "long": "118.70596181",
@@ -10451,7 +10451,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "周岗社区",
+            "NAME": "周岗社区",
             "COMMUID": "320115008020",
             "lat": "31.7911449",
             "long": "118.9379356",
@@ -10505,7 +10505,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "周郎社区",
+            "NAME": "周郎社区",
             "COMMUID": "320115004012",
             "lat": "31.92176886",
             "long": "119.08405153",
@@ -10561,7 +10561,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "周里村委会",
+            "NAME": "周里村委会",
             "COMMUID": "320115002006",
             "lat": "31.81187578",
             "long": "118.83985403",
@@ -10627,7 +10627,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "周子社区",
+            "NAME": "周子社区",
             "COMMUID": "320115004014",
             "lat": "31.88517903",
             "long": "119.06089396",
@@ -10684,7 +10684,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "朱门社区",
+            "NAME": "朱门社区",
             "COMMUID": "320115006019",
             "lat": "31.76312118",
             "long": "118.67964358",
@@ -10779,7 +10779,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "紫金江宁特别社区",
+            "NAME": "紫金江宁特别社区",
             "COMMUID": "320115401001",
             "lat": "31.85771216",
             "long": "118.83922269",
@@ -10874,7 +10874,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "祖堂社区",
+            "NAME": "祖堂社区",
             "COMMUID": "320115002012",
             "lat": "31.87007134",
             "long": "118.72929403",
@@ -10945,7 +10945,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "作厂社区",
+            "NAME": "作厂社区",
             "COMMUID": "320115003003",
             "lat": "32.03387105",
             "long": "119.07354939",
@@ -11181,7 +11181,7 @@ var  shequdata={
             ]
         },
         "properties": {
-            "COMMUNAME": "江宁经济技术开发区",
+            "NAME": "江宁经济技术开发区",
             "COMMUID": "320142001001",
             "lat": "31.90196191",
             "long": "118.79748799",
