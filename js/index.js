@@ -4,8 +4,19 @@
      zoomControl: false
  }).setView([31.83, 118.8], 11);
  mymap.attributionControl.setPrefix('<a href="http://www.njmap.gov.cn" title="南京天地图服务">南京天地图</a');
- new L.TileLayer.TDT.Vector().addTo(mymap);
- new L.TileLayer.TDT.VectorAnno().addTo(mymap);
+ new L.TileLayer.WMTS("http://www.njmap.gov.cn:8280/ResourcesProxy/Gateway/jcvxwrbcer/NJDLG_DT_NJ/wmts",
+        {minZoom: 0,
+        maxZoom: 20,
+        tileMatrixSet: 'Matrix_0',
+        layer: 'NJDLG_DT_10_20',
+        format: 'image%2Ftile'}).addTo(mymap);
+  new L.TileLayer.WMTS("http://www.njmap.gov.cn:8280/ResourcesProxy/Gateway/abztwxwdik/NJDLG_ZJ_10_20/wmts",
+        {minZoom: 0,
+        maxZoom: 20,
+        tileMatrixSet: 'Matrix_0',
+        layer: 'NJDLG_ZJ_10_20',
+        format: 'image%2Ftile'}).addTo(mymap);
+
  var heatdangandata = [];
  var tangniaodata = [];
  var gaoxueyadata = [];
@@ -602,10 +613,11 @@
      if ($(".rightpanel a").is(":hidden")) {
          $(".rightpanel a").show();
          shequgeojson.addTo(mymap);
-         currentitem='taoniaobin';
+         currentitem='tangniaobin';
           currentlegend.remove();
         tangniaolegend.addTo(mymap);
         currentlegend = tangniaolegend;
+
         // hexLayer.addTo(mymap);
      } else {
          $(".rightpanel a").hide();
